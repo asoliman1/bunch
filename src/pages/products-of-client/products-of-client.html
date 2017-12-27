@@ -1,0 +1,32 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-buttons left>
+      <button icon-only ion-button (click)="goBack()">
+        <img src="assets/icon/bt-regresar-menu.png" class="image-left">
+      </button>     
+    </ion-buttons>
+    <ion-title class="titleStyle">{{"Products"|translate}}</ion-title>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<ion-list no-border>
+   <ion-item no-lines  class="ionitem-cls" (click)="pushTomyproducts()">
+    <h2>{{"My Products"|translate}}</h2>
+    <p>{{"Recommended"|translate}}</p>
+    <ion-buttons item-end>
+      <button class="detail-btn-cls" ><img src="assets/icon/bt-siguiente.png"></button>
+    </ion-buttons>
+  </ion-item>
+  <ion-item no-lines *ngFor="let adv of productModels" class="ionitem-cls" (click)="pushToproductDetail(adv)">
+    <ion-thumbnail item-start class="thumbnail-cls">
+      <img src="{{adv.img}}" >
+    </ion-thumbnail>
+    <h2>{{adv.paymentType}}</h2>
+    <p>{{adv.bank}} - {{adv.accountType}}</p>
+    <ion-buttons item-end>
+      <button class="detail-btn-cls" ><img src="assets/icon/bt-siguiente.png"></button>
+    </ion-buttons>
+  </ion-item>
+</ion-list>
+</ion-content>

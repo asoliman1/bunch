@@ -1,0 +1,32 @@
+<ion-header class="header-cls">
+
+  <ion-toolbar>
+    <ion-buttons left>
+      <button icon-only ion-button (click)="goBack()">
+        <img src="assets/icon/bt-regresar-menu.png" class="image-left">
+      </button>     
+    </ion-buttons>
+    <ion-buttons right>
+      <button icon-only ion-button  (click)="deleteNotification()" >
+        <img src="assets/icon/eliminar.png" class="image-right">
+      </button>
+    </ion-buttons>   
+
+    <ion-title class="titleStyle">{{"Messages"|translate}}</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content  padding >
+<div class="title-notif">
+      {{messageModel.message}}
+</div>
+    <div text-center  >
+    <img  src="assets/img/tarjeta 2.png" > 
+    </div>
+  <div style="height:10px;" ></div>
+<div class="content-notif">    
+      {{messageModel.content}}
+</div>
+</ion-content>

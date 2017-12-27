@@ -1,0 +1,53 @@
+<ion-header >
+
+  <ion-toolbar>
+    <ion-buttons left>
+      <button icon-only ion-button (click)="goBack()">
+        <img src="assets/icon/bt-regresar-menu.png" class="image-left">
+      </button>     
+    </ion-buttons> 
+    <ion-title class="titleStyle">{{"details of product"|translate}}</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list >
+      <ion-item class="ionitem-cls">
+        <ion-label stacked class="label-stl">{{"insurance"|translate}}</ion-label>
+        <ion-input type="text" placeholder="no data"></ion-input>
+      </ion-item>
+      <ion-item class="ionitem-cls">
+        <ion-label stacked class="label-stl">{{"Insurance carrier"|translate}}</ion-label>
+        <ion-input type="text" placeholder="no data"></ion-input>
+      </ion-item>
+      <ion-item class="ionitem-cls">
+        <ion-label stacked class="label-stl">{{"Policy"|translate}}</ion-label>
+        <ion-input type="text" placeholder="no data"></ion-input>
+      </ion-item>
+      <ion-item class="ionitem-cls">
+        <ion-label stacked class="label-stl">{{"Description"|translate}}</ion-label>
+        <ion-input type="text" placeholder="no data"></ion-input>
+      </ion-item>  
+      <ion-item class="ionitem-cls">
+        <ion-label stacked class="label-stl">{{"Validity"|translate}}</ion-label>
+        <ion-input type="text" placeholder="no data"></ion-input>
+      </ion-item>  
+      <ion-item class="ionitem-cls">
+        <ion-label stacked class="label-stl">{{"Total premium"|translate}}</ion-label>
+        <ion-input type="text" placeholder="no data"></ion-input>
+      </ion-item>  
+      <ion-item class="ionitem-cls">
+        <ion-label stacked class="label-stl">{{"Frequency of payment"|translate}}</ion-label>
+        <ion-input type="text" placeholder="no data"></ion-input>
+      </ion-item>  
+      <ion-item class="ionitem-cls">
+        <ion-label stacked class="label-stl">{{"Way to pay"|translate}}</ion-label>
+        <ion-input type="text" placeholder="no data"></ion-input>
+      </ion-item>        
+      <button ion-button full style="border-radius:10px;background:rgb(34,146,192)" >{{"Send download reminder"|translate}}</button> 
+      </ion-list>
+
+</ion-content>

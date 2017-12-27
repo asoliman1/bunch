@@ -1,0 +1,87 @@
+page-registrer {
+    background: rgb(245,245,245);
+
+    .divImg {
+        width: 15%;
+        margin: 5px auto;
+    }
+
+    ion-header {
+        margin: 0 auto;
+        background: url('../assets/img/splash2.jpg');
+        background-position-y: bottom; 
+        color: white;    
+        min-height: 100px;
+
+        img {
+            height: 40px !important;            
+            margin-top: 15px;
+        }
+        div {
+            width: 90%;
+            margin: 5px auto;
+        }
+    }    
+    .scroll-content {
+        overflow-y: auto;
+    }
+    .divRow {
+        width: 100%;
+        margin: 10px auto;
+        text-align: center;
+        ion-input {
+            background: white !important;
+        }
+    }
+
+    ion-label {
+        text-align: left;
+    }
+    .input-cls {
+        margin: 5px auto;
+        border: 1px solid white;
+        border-radius: 10px;
+        padding-left: 10px;
+    }
+
+    .titleForm{
+        width: auto;
+        font-family: RaleSubtitle;
+        font-size: 1.4em;
+        text-align: center;
+    }
+
+    .content-cntainer {
+        background: rgb(240,240,240);
+    }
+    .back-btn {
+        margin: 0 auto 10px auto;
+        padding: 0;
+        border-radius: 70%;
+        background: rgb(0,153,204);
+    }
+    .continue-btn {
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 10px;
+        background: rgb(0,153,204);
+    }
+
+    .footerSection {
+        width: 100%;
+        margin-top: 20%;
+        bottom: 0 !important;
+        position: static !important;
+    }
+    .slide-content-layout {
+        height: 100%;
+    }
+    .slide-zoom {
+        height: 100% !important;
+    }
+
+    #gender .slide-zoom {
+        height: 100% !important;
+    }
+}
+    

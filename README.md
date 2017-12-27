@@ -1,66 +1,60 @@
-# The Ionic Super Starter 🎮
+# README #
 
-_Note: the Ionic Super Starter requires Ionic CLI 3._
+This README would normally document whatever steps are necessary to get your application up and running.
 
-<img src="super2.png" width="400" />
+### What is this repository for? ###
 
-The Ionic Super Starter is a batteries-included starter project for Ionic apps complete with pre-built pages, providers, and best practices for Ionic development.
+* Quick summary
+* Version
+* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
-The goal of the Super Starter is to get you from zero to app store faster than before, with a set of opinions from the Ionic team around page layout, data/user management, and project structure.
+### How do I get set up? ###
 
-The way to use this starter is to pick and choose the various page types you want use, and remove the ones you don't. If you want a blank slate, this starter isn't for you (use the `blank` type instead).
+First of all you have to get installed NodeJS and Ionic, to do this, follow the next steps:
 
-One of the big advances in Ionic was moving from a rigid route-based navigation system to a flexible push/pop navigation system modeled off common native SDKs. We've embraced this pattern to provide a set of reusable pages that can be navigated to anywhere in the app. Take a look at the [Settings page](https://github.com/ionic-team/ionic-starter-super/blob/master/src/pages/settings/settings.html#L38) for a cool example of a page navigating to itself to provide a different UI without duplicating code.
+* Install node
 
-## Table of Contents
+MAC: Before install node, we need Homebrew, copy and paste this in terminal and press enter:
+sudo ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-1. [Getting Started](#getting-started)
-2. [Pages](#pages)
-3. [Providers](#providers)
-4. [i18n](#i18n) (adding languages)
+type your admin's password to give full access to you system files, so we make sure it installs properly.
 
-## <a name="getting-started"></a>Getting Started
+After the installation, copy and paste the next command, an then sit and wait: 
 
-To test this starter out, install the latest version of the Ionic CLI and run:
+sudo brew install node
 
-```bash
-ionic start mySuperApp super
-```
+Ok, now we should have node installated, we can check it by executing: node -v , if it returns a version number, it means that we have the latest version of node installed.
 
-## Pages
+* Install Ionic
+    Simply execute: npm install -g cordova ionic
 
-The Super Starter comes with a variety of ready-made pages. These pages help you assemble common building blocks for your app so you can focus on your unique features and branding.
+* Set up project
 
-The app loads with the `FirstRunPage` set to `TutorialPage` as the default. If the user has already gone through this page once, it will be skipped the next time they load the app.
+    Once we have installed ionic and node, we have to clone the project in or computer. Then, we have to navigate with or Terminal or cmd, depending our OS, to the projects directori and execute:
+    ionic serve
 
-If the tutorial is skipped but the user hasn't logged in yet, the Welcome page will be displayed which is a "splash" prompting the user to log in or create an account.
+    It will compile our project and launch it in a browser. For sure probably it will not be displayed properly, since is a mobile app an not a web app. 
 
-Once the user is authenticated, the app will load with the `MainPage` which is set to be the `TabsPage` as the default.
+* Launch the project in a device:
 
-The entry and main pages can be configured easily by updating the corresponding variables in [src/pages/pages.ts](https://github.com/ionic-team/ionic-starter-super/blob/master/src/pages/pages.ts).
+    If we want to launch the project in our device, first of all we need to add the platform for which we want to launch. Use the next command:
 
-Please read the [Pages](https://github.com/ionic-team/ionic-starter-super/tree/master/src/pages) readme, and the readme for each page in the source for more documentation on each.
+    ionic cordova platform add [PLATFOMNAME]
 
-## Providers
+    where [PLATFORNAME] could be any of the supported cordova platforms
 
-The Super Starter comes with some basic implementations of common providers.
+    After that, we have to import the project in our ide (xCode for iOS and Android Studio for windows and linux), and start the app in our device.
 
-### User
+    
 
-The `User` provider is used to authenticate users through its `login(accountInfo)` and `signup(accountInfo)` methods, which perform `POST` requests to an API endpoint that you will need to configure.
 
-### Api
+### Contribution guidelines ###
 
-The `Api` provider is a simple CRUD frontend to an API. Simply put the root of your API url in the Api class and call get/post/put/patch/delete 
+* Writing tests
+* Code review
+* Other guidelines
 
-## i18n
+### Who do I talk to? ###
 
-Ionic Super Starter comes with internationalization (i18n) out of the box with [ngx-translate](https://github.com/ngx-translate/core). This makes it easy to change the text used in the app by modifying only one file. 
-
-### Adding Languages
-
-To add new languages, add new files to the `src/assets/i18n` directory, following the pattern of LANGCODE.json where LANGCODE is the language/locale code (ex: en/gb/de/es/etc.).
-
-### Changing the Language
-
-To change the language of the app, edit `src/app/app.component.ts` and modify `translate.use('en')` to use the LANGCODE from `src/assets/i18n/`
+* Repo owner or admin
+* Other community or team contact

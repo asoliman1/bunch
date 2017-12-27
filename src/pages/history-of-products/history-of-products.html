@@ -1,0 +1,52 @@
+<ion-header >
+
+  <ion-toolbar>
+    <ion-buttons left>
+      <button icon-only ion-button (click)="goBack()">
+        <img src="assets/icon/bt-regresar-menu.png" class="image-left">
+      </button>     
+    </ion-buttons>
+    <ion-buttons right>
+      <button icon-only ion-button  (click)="search" >
+        <img src="assets/icon/buscar.png" class="image-right">
+      </button>
+    </ion-buttons>   
+
+    <ion-title class="titleStyle">{{"History of products"|translate}}</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-card>
+  <ion-card-header>
+    Chevrolate Aveo 2010
+    <p>Seguro de Auto</p>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-row>
+      <ion-col >
+        <img class="img-col" src="assets/icon/bt-inversiones.png">
+      </ion-col>
+      <div style="width:3px;background: rgb(34,146,192);" ></div>
+      <ion-col text-center>
+        Amplia
+        <p style="font-weight:lighter">Covertura</p>
+      </ion-col>
+      <div style="width:3px;background: rgb(34,146,192);" ></div>      
+      <ion-col text-center>
+      $6,050
+      <p style="font-weight:lighter">Anual</p>  
+      </ion-col>  
+    </ion-row>
+    <h3>COBERTURAS</h3>
+      <button ion-item detail-push class="ionitem-cls" (click)="gotodetails()" ion-content>
+        <ion-icon item-start >   <img src="assets/icon/enviar-mensaje.png" ></ion-icon>
+        COBERTURAS
+      <button  class="chat-button" style="width: 100%;height: 100%;background: transparent;" ></button>
+    </button>         
+  </ion-card-content>
+</ion-card>
+
+</ion-content>

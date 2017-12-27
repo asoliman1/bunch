@@ -1,2 +1,170 @@
 page-login {
+  overflow: hidden;
+
+  ion-title div{
+    color: white !important;
+  }
+
+  .login-content {
+    
+    background: url("../assets/img/splash2.jpg") no-repeat;
+    background-size: cover;
+    color: white !important;
+    text-align: center;
+
+    ion-item {
+      border-radius: 15px !important;
+      padding: 0;
+      margin: 10px auto;
+
+
+    }
+
+    ion-input {
+      min-height: 20px !important;
+    }
+    
+    .avatar-row {
+      margin: 0 auto;
+      .avatar-container {
+        width: 35%;
+        margin: 30px auto 0 auto;
+        border-radius: 50%;
+      }
+
+      img {
+        border-radius: 50%;
+        overflow: hidden;
+        width: 100%;
+        border: 3px solid white;
+      }
+
+      .subtitle-text{
+        margin: 10px auto;
+        font-size: 20px;
+        font-weight: 100;
+        width: 80%;
+      }
+
+      .toolbar-title-md{
+        margin: 10px auto;
+        font-size: 24px;
+        color:white;
+        width: 100%;
+      }
+    }
+
+    .logo-row {
+      padding-top: 50px;
+      padding-bottom: 20px;
+    }
+ 
+    .login-box {
+      .imageDiv {
+        min-width: 5px;
+        min-height: 5px;
+        background: red;
+      }
+      .login-title {
+        font-size: 20px;
+        font-weight: 100;
+      }
+      .text-input-md {
+        margin: 13px 40px;
+        padding: 0;
+        width: 65%;
+      }
+      .divRow {
+          width: 100%;
+          margin: 10px auto;
+          text-align: center;
+          border-radius: 15px;
+          border: 1px solid;
+          background: white !important;
+          ion-input {
+              background: white !important;
+              border: 1px solid white;
+              border-radius: 13px;
+              color: black;
+          }
+
+      ion-input.user::before  {
+        content: url("../assets/icon/usuario-formularios.png");
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          left: 3%;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+          text-align: center;
+          line-height: 40px;
+          align-items: center;
+      }
+      ion-input.pass::before  {
+        content: url("../assets/icon/contrasena-formularios.png");
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          left: 3%;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+          text-align: center;
+          line-height: 40px;
+          align-items: center;
+      }
+
+          
+      }       
+
+    }
+
+    .signup-col {
+      margin: 0px 16px 0px 16px;
+      padding-bottom: 20px;
+    }
+
+    .item-inner {
+      border-bottom-color: #ffffff !important;
+      box-shadow: none !important;
+    }
+
+    .form-btn {
+      font-size: 14px;
+      font-weight: 100;
+      background: transparent;
+      border: none;
+      box-shadow: none !important;
+      text-transform: none !important;
+      height: auto;
+      
+    }
+ 
+    .products-btn {
+      color: #ffffff;
+      font-size: 0.8em;
+      width: 90%;
+      margin: 5px auto 0 auto;
+      border: 2px white solid;
+      font-size: 20px;
+      border-radius: 5px;
+      background: rgba(0,153,204,255);
+      font-weight: 100;
+      text-transform: none;
+    }
+    
+    .list-md[inset] {
+      margin-bottom: 0px;
+      margin-top: 0px;    
+    }
+
+    .footer-warn{
+      font-size: 10px;
+      width: 100%;
+      text-align: center;
+      padding-top: 10px;
+    }
+  }
+ 
 }

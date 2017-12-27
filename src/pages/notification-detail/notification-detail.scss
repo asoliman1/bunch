@@ -1,0 +1,57 @@
+
+page-notification-detail {
+    ion-content{
+        background-color: rgb(230,230,230)!important;
+    }
+    ion-header {
+    .header-cls {
+        min-height: 0 !important;
+    }
+   
+    .titleStyle {
+        left: 0;
+        top: 0;
+        padding: 0 90px 1px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        pointer-events: none;       
+        text-align: center;
+    }
+    button {
+        background: transparent !important;
+        img {
+            height: auto !important;            
+            max-height: 25px !important;
+            margin-top: 0 !important;
+
+            .image-left{
+                padding-left: 10px !important;
+            }
+            .image-right{
+                padding-right: 10px !important;
+            }
+        }
+    }
+    div { 
+        margin: 0 !important;
+    }
+}
+    .title-notif {
+        width: 100%;
+        font-family: RaleTitle;
+        margin: 15px auto;
+        font-size: 16px;
+    }
+
+    .content-notif {
+        background-color: white;
+        width: 100%;
+        font-family: RaleText;
+        border: 1px solid grey;
+        padding: 15px;
+        border-radius: 10px;
+    }
+}

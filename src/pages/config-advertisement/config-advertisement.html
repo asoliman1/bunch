@@ -1,0 +1,32 @@
+<ion-header>
+ <ion-toolbar>
+    <ion-buttons left>
+      <button icon-only ion-button (click)="goBack()">
+        <img src="assets/icon/bt-regresar-menu.png" class="image-left">
+      </button>     
+    </ion-buttons>
+    <ion-title>{{"Ad"|translate}}</ion-title>    
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div>
+    <h2 class="title-style">{{"Edit your ad"|translate}}</h2>
+  </div>
+  <ion-list>
+    
+    <ion-item class="ionitem-cls" no-border>      
+      <ion-label stacked>{{"Title"|translate}}</ion-label>
+      <ion-textarea placeholder="Titulo personalizado" lineHeight="22" [(ngModel)]="titleAdv"></ion-textarea>
+      <!-- <ion-input type="text" style="min-height: 50px;" [(ngModel)]="titleAdv"></ion-input> -->
+    </ion-item>
+    <ion-item class="ionitem-cls" no-border>      
+      <ion-label stacked>{{"Custom message"|translate}}</ion-label>
+      <ion-textarea type="text" style="min-height: 50px;" [(ngModel)]="customMessage"></ion-textarea>
+    </ion-item>
+    <button ion-button full class="publish-adv-btn" (click)="goBackWithParams()" >{{"save"|translate}}</button>
+  </ion-list>
+  
+
+</ion-content>

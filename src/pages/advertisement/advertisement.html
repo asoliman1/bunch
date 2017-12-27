@@ -1,0 +1,39 @@
+<ion-header class="tab-header-cls">
+  <ion-col>
+    <div class="divImg">
+      <img src="assets/icon/anuncios-header.png">
+    </div>
+    <div class="titleForm">{{"ADVERTISMENTS" | translate}}</div>    
+  </ion-col>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list no-border>
+    <ion-list-header class="list-header-cls">{{"PUBLISHED" | translate}}</ion-list-header>
+  <ion-item no-lines *ngFor="let adv of publishedAdvs" class="ionitem-cls" (click)="detailAdv(adv)">
+    <ion-thumbnail item-start class="thumbnail-cls">
+      <img src="{{adv.img}}" >
+    </ion-thumbnail>
+    <h2>{{adv.paymentType}}</h2>
+    <p>{{adv.bank}} - {{adv.accountType}}</p>
+    <p>Crédito de {{adv.bunch}}</p>
+    <ion-buttons item-end>
+      <button class="detail-btn-cls" ><img src="assets/icon/bt-siguiente.png"></button>
+    </ion-buttons>
+  </ion-item>
+  <ion-list-header class="list-header-cls">{{"DRAFTS" | translate}}</ion-list-header>
+  <ion-item no-lines *ngFor="let adv of draftAdvs" class="ionitem-cls"  (click)="detailAdv(adv)">
+    <ion-thumbnail item-start class="thumbnail-cls">
+      <img src="{{adv.img}}" >
+    </ion-thumbnail>
+    <h2>{{adv.paymentType}}</h2>
+    <p>{{adv.bank}} - {{adv.accountType}}</p>
+    <p>Crédito de {{adv.bunch}}</p>
+    <ion-buttons item-end>
+      <button class="detail-btn-cls"><img src="assets/icon/bt-siguiente.png"></button>
+    </ion-buttons>
+  </ion-item>
+  <button ion-button full class="publish-adv-btn" (click)="newAdv()">{{"POST ANOTHER AD" | translate}}</button>
+</ion-list>
+</ion-content>

@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button icon-only ion-button (click)="goBack()">
+        <img src="assets/icon/bt-regresar-menu.png" class="image-left">
+      </button>
+    </ion-buttons>
+    <ion-title>{{"Messages"|translate}}</ion-title>
+
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list-header class="title-entrance-chat">{{chat.name}}</ion-list-header>
+
+  <ion-segment [(ngModel)]="type">
+    <ion-segment-button value="bitacora" class="border-segment-cls" style="border-right: 0 !important; border-top-right-radius: 0 !important;border-bottom-right-radius: 0 !important;">
+      {{"Binnacle"|translate}}
+    </ion-segment-button>
+    <ion-segment-button value="oportunidades" class="border-segment-cls" style="border-left: 0 !important;border-top-left-radius: 0 !important;border-bottom-left-radius: 0 !important;">
+      {{"Opportunities"|translate}}
+    </ion-segment-button>
+  </ion-segment>
+  <div [ngSwitch]="type">
+    <div *ngSwitchCase="'bitacora'">
+      <ion-list>
+        <ion-item *ngFor="let message of conversations" class="ionitem-cls">
+          <ion-avatar item-start [hidden]="message.mine">
+            <img src="assets/icon/usuario-chat-1.png">
+          </ion-avatar>
+          <h3 class="last-message-stl">{{message.text}}</h3>
+          <p>{{"Updated"|translate}} {{message.at}}</p>
+          <ion-avatar item-end [hidden]="!message.mine">
+            <img src="assets/icon/usuario-chat-2.png">
+          </ion-avatar>
+        </ion-item>
+      </ion-list>
+    </div>
+    <div *ngSwitchCase="'oportunidades'">
+      <ion-card>
+        <ion-card-header>
+          Chevrolate Aveo 2010
+          <p>Seguro de Auto</p>
+        </ion-card-header>
+        <ion-card-content text-center>
+          <ion-row>
+            <ion-col>
+              <img class="img-col" src="assets/icon/bt-inversiones.png">
+            </ion-col>
+            <div style="width:3px;background: rgb(34,146,192);"></div>
+            <ion-col text-center>
+              Amplia
+              <p style="font-weight:lighter">Covertura</p>
+            </ion-col>
+            <div style="width:3px;background: rgb(34,146,192);"></div>
+            <ion-col text-center>
+              $6,050
+              <p style="font-weight:lighter">Anual</p>
+            </ion-col>
+          </ion-row>
+          <button ion-button clear [hidden]="!contents" (click)="showcontents()">{{"Continue"|translate}}</button>
+          <div text-start [hidden]="contents">
+            <h3>COBERTURAS</h3>
+            <li>DAÑOS MATERIALES: 5% V. COMERCIAL</li>
+            <li>ROBO TOTAL: 10% V. COMERCIAL</li>
+            <li>RC PERSONAS: 3,000,000.00</li>
+            <li>RC: 800,000.00</li>
+            <li>DEFENSA LEGAL: AMPARADA</li>
+            <li>GASTOS MÉDICOS: 50,000.00</li>
+            <li>ASISTENCIA VIAL: AMPARADA</li>
+          </div>
+          <button ion-button full class="publish-adv-btn" [hidden]="contents" (click)="gotopurshase()">{{"Redistribute"|translate}}</button>
+
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
+<ion-footer [hidden]="type=='oportunidades'" keyboard-attach>
+  <ion-input type="text" [(ngModel)]="chatBox" class="footer-input" placeholder="Message..."></ion-input>
+  <div style="width: 10%;"><button (click)="send(chatBox)" class="chat-button" style="width: 100%;height: 100%;background: transparent;"></button></div>
+
+</ion-footer>

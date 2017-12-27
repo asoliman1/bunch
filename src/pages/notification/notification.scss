@@ -1,0 +1,49 @@
+
+
+page-notification {
+      ion-content{
+        background-color: rgb(230,230,230)!important;
+    }
+    .tab-header-cls {
+        background: url('../assets/img/splash2.jpg');
+        background-position-y: bottom; 
+        color: white;
+        margin: 0 auto ;
+        min-height: 100px;
+
+        div.divImg {
+            width: 15%;
+            margin: 5px auto;
+            img {
+                height: 40px !important;            
+                margin-top: 15px;
+
+            }
+    }
+    .titleForm {
+        width: 90%;
+        margin: 5px auto;
+        text-align: center;
+    }
+}
+    .notification-btn {
+        padding-left: 16px;
+        padding-right: 16px;
+        border-radius: 10px;
+        border: 1px solid gray;
+        margin-bottom: 10px;
+    }
+    .notification-btn::after{
+        content: url("../assets/icon/bt-siguiente.png");
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 90%;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        text-align: center;
+        line-height: 40px;
+        align-items: center;
+    }
+}

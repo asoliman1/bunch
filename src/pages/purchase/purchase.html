@@ -1,0 +1,199 @@
+<ion-header>
+
+  <ion-toolbar>
+    <ion-buttons left>
+      <button icon-only ion-button (click)="goBack()">
+        <img src="assets/icon/bt-regresar-menu.png" class="image-left">
+      </button>     
+    </ion-buttons>
+    <ion-title>{{"Acquire product"|translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content padding>
+  <ion-segment [(ngModel)]="type">
+      <ion-segment-button value="client" class="border-segment-cls" style="border-right: 0 !important; border-top-right-radius: 0 !important;border-bottom-right-radius: 0 !important;">
+        {{"Client"|translate}}
+      </ion-segment-button>
+      <ion-segment-button  value="product" class="border-segment-cls" style="border-left: 0 !important;border-top-left-radius: 0 !important;border-bottom-left-radius: 0 !important;">
+        {{"Product"|translate}}
+      </ion-segment-button>
+      <ion-segment-button  value="compare" class="border-segment-cls" style="border-left: 0 !important;border-top-left-radius: 0 !important;border-bottom-left-radius: 0 !important;">
+        {{"Compare"|translate}}
+      </ion-segment-button>
+      <ion-segment-button  value="payment" class="border-segment-cls" style="border-left: 0 !important;border-top-left-radius: 0 !important;border-bottom-left-radius: 0 !important;">
+        {{"Pay"|translate}}
+      </ion-segment-button>
+  </ion-segment>
+<!-- 
+  <div style="width:100%; min-height:80px;" (ngModel)="typeOfProduct">
+    <div class="type-container-stl"><span>{{typeOfProduct}}</span></div>
+  </div> -->
+ <ion-item class="ionitem-cls header-title">
+   <ion-label>{{typeOfProduct}}</ion-label>
+ </ion-item>
+  
+
+  <div [ngSwitch]="type">
+     <div  *ngSwitchCase="'client'" class="full-wrapper"></div>
+
+     <div  *ngSwitchCase="'product'" class="full-wrapper">      
+      <h2 class="label-stl">{{"Search Customer"|translate}}</h2>
+      <ion-list [hidden]="!firstForm">
+      <ion-item class="ionitem-cls">
+        <ion-input type="text" placeholder="{{'Check if your friend is registered'|translate}}"></ion-input>
+        <ion-buttons item-end>
+          <button class="detail-btn-cls" ><img src="assets/icon/buscar.png"></button>
+        </ion-buttons>
+      </ion-item>
+      <ion-item class="ionitem-cls">
+        <ion-label stacked class="label-stl">{{"NAME"|translate}}</ion-label>
+        <ion-input type="text" placeholder="{{'Indicates the name'|translate}}"  ></ion-input>
+      </ion-item> 
+      <ion-item class="ionitem-cls" (click)="launchPicker()">
+        <h2 stacked>{{"Age"|translate}}</h2>
+        <div>{{age}}</div>
+      </ion-item>      
+      <ion-item class="ionitem-cls">
+        <ion-label class="label-stl">{{"Gender"|translate}}</ion-label>
+        <ion-select [(ngModel)]="gender">
+          <ion-option value="f">{{"Female"|translate}}</ion-option>
+          <ion-option value="m">{{"Male"|translate}}</ion-option>
+        </ion-select>
+      </ion-item>
+       <ion-item class="ionitem-cls">
+        <ion-label stacked class="label-stl">{{"EMAIL"|translate}}</ion-label>
+        <ion-input type="email" placeholder="{{'Indicates the email'|translate}}"></ion-input>
+      </ion-item> 
+      <ion-item class="ionitem-cls">
+        <ion-label stacked class="label-stl">{{"Mobile phone"|translate}}</ion-label>
+        <ion-input type="number" placeholder="{{'Enter phone number'|translate}}"></ion-input>
+      </ion-item> 
+      <ion-item class="ionitem-cls">
+        <ion-label stacked class="label-stl">{{"Address"|translate}}</ion-label>
+        <ion-input type="text" placeholder="{{'Indicates place of residence'|translate}}"></ion-input>
+      </ion-item> 
+      <ion-item class="ionitem-cls">
+        <ion-label stacked class="label-stl">{{"Postal Code"|translate}}</ion-label>
+        <ion-input type="text" placeholder="{{'Enter the postal code'|translate}}"></ion-input>
+      </ion-item>
+      <ion-item class="ionitem-cls">
+        <ion-label stacked class="label-stl">{{"Outdoor Number"|translate}}</ion-label>
+        <ion-input type="text" placeholder="{{'Indicates the external number'|translate}}"></ion-input>
+      </ion-item>
+      <ion-item class="ionitem-cls">
+        <ion-label stacked class="label-stl">{{"Interior number"|translate}}</ion-label>
+        <ion-input type="text" placeholder="{{'Indicate the inner number'|translate}}"></ion-input>
+      </ion-item>    
+      <ion-item class="ionitem-cls">
+        <ion-label stacked class="label-stl">{{"Colony"|translate}}</ion-label>
+        <ion-input type="text" placeholder="{{'Indicates the colony'|translate}}"></ion-input>
+      </ion-item>  
+      <ion-item class="ionitem-cls">
+        <ion-label stacked class="label-stl">{{"State"|translate}}</ion-label>
+        <ion-input type="text" placeholder="{{'Indicate your state of residence'|translate}}"></ion-input>
+      </ion-item> 
+      <ion-item class="ionitem-cls">
+        <ion-label stacked class="label-stl">{{"Delegation"|translate}}</ion-label>
+        <ion-input type="text" placeholder="{{'Indicates delegation'|translate}}"></ion-input>
+      </ion-item>
+      <button ion-button full class="publish-adv-btn" (click)="nextForm()">{{"Save and continue"|translate}}</button> 
+      </ion-list>
+      
+      
+      <ion-list [hidden]="firstForm">
+      <ion-item class="ionitem-cls">
+        <ion-label class="label-stl">{{"Brand"|translate}}</ion-label>
+        <ion-select [(ngModel)]="bond">
+          <ion-option value="r">Renault</ion-option>
+          <ion-option value="f">Ferrari</ion-option>
+          <ion-option value="o">Opel</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item class="ionitem-cls">
+        <ion-label class="label-stl">{{"Model"|translate}}</ion-label>
+        <ion-select [(ngModel)]="model">
+          <ion-option value="0">2015</ion-option>
+          <ion-option value="1">2016</ion-option>
+          <ion-option value="2">2017</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item class="ionitem-cls">
+        <ion-label stacked class="label-stl">{{"Description"|translate}}</ion-label>
+        <ion-input type="text" placeholder="{{'Indicates description'|translate}}"></ion-input>
+      </ion-item>
+      <ion-item class="ionitem-cls">
+        <ion-label stacked class="label-stl">{{"Rack Number"|translate}}</ion-label>
+        <ion-input type="text" placeholder="{{'Indicates the frame'|translate}}"></ion-input>
+      </ion-item>
+      <ion-item class="ionitem-cls">
+        <ion-label stacked class="label-stl">{{"Enrollment"|translate}}</ion-label>
+        <ion-input type="text" placeholder="{{'Indicates the registration'|translate}}"></ion-input>
+      </ion-item>      
+      <button ion-button full class="publish-adv-btn" (click)="compareSegment()">{{"Following"|translate}}</button> 
+      </ion-list>
+      
+
+
+     </div>
+     <div  *ngSwitchCase="'compare'" class="full-wrapper">
+       <ion-list>
+         <ion-item>
+           <div>Jetta 2014 Descripción 4ptas, ATM, etc.</div>
+         </ion-item>
+
+        <ion-item class="ionitem-cls">
+          <ion-label class="label-stl">{{"Improve description"|translate}}</ion-label>
+          <ion-select [(ngModel)]="model">
+            <ion-option value="0">No data</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <button ion-item detail-push class="ionitem-cls" ion-content *ngFor="let comp of comparativas">
+          <ion-icon item-start><img width="40" height="30" src="{{comp.img}}"></ion-icon>
+          <span>{{comp.text}}</span>
+          <button  class="chat-button notification-btn" style="width: 100%;height: 100%;background: transparent;" ></button>
+        </button>
+
+        <button ion-button full class="publish-adv-btn" (click)="paymentSegment()">{{"Send detailed quote to user"|translate}}</button> 
+       </ion-list>
+     </div>
+     <div  *ngSwitchCase="'payment'" class="full-wrapper">
+       <ion-card>
+  <ion-card-header>
+    Chevrolate Aveo 2010
+    <p>Seguro de Auto</p>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-row>
+      <ion-col >
+        <img class="img-col" src="assets/icon/bt-inversiones.png">
+      </ion-col>
+      <div style="width:3px;background: rgb(34,146,192);" ></div>
+      <ion-col text-center>
+        Amplia
+        <p style="font-weight:lighter">Covertura</p>
+      </ion-col>
+      <div style="width:3px;background: rgb(34,146,192);" ></div>      
+      <ion-col text-center>
+      $6,050
+      <p style="font-weight:lighter">Anual</p>  
+      </ion-col>  
+    </ion-row>
+    <h3>COBERTURAS</h3>
+    <li>DAÑOS MATERIALES: 5% V. COMERCIAL</li>
+    <li>ROBO TOTAL: 10% V. COMERCIAL</li>
+    <li>RC PERSONAS: 3,000,000.00</li>
+    <li>RC: 800,000.00</li>
+    <li>DEFENSA LEGAL: AMPARADA</li>  
+    <li>GASTOS MÉDICOS: 50,000.00</li>    
+    <li>ASISTENCIA VIAL: AMPARADA</li>          
+  </ion-card-content>
+</ion-card>
+        <button ion-button full class="publish-adv-btn" (click)="paymentconfirm()">{{"Submit Collection Request"|translate}}</button> 
+     </div>
+   </div>
+
+</ion-content>

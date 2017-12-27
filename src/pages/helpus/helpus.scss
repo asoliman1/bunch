@@ -1,0 +1,30 @@
+page-helpus {
+    ion-content{
+                background-color: rgb(230,230,230)!important;
+    }
+    .title-help {
+        width: 100%;
+        font-family: RaleTitle;
+        margin: 15px auto;
+        font-size: 16px;
+    }
+
+    .help-box {
+        height:50px;
+        background: white;
+        border-radius: 5px;
+        border : 1px solid grey ;
+    }
+
+
+.circle {
+    margin-left:43%;
+    margin-top:50px;
+	width: 200px;
+	height: 200px;
+	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 49%, rgba(5,193,255,1) 50%, rgba(5,193,255,1) 100%);
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+}
+}

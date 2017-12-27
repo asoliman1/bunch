@@ -1,0 +1,112 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button icon-only ion-button (click)="goBack()">
+        <img src="assets/icon/bt-regresar-menu.png" class="image-left">
+      </button>     
+    </ion-buttons>
+    <ion-title>{{"Details of the listing"|translate}}</ion-title>    
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-segment [(ngModel)]="type">
+      <ion-segment-button value="advertisement" class="border-segment-cls" style="border-right: 0 !important; border-top-right-radius: 0 !important;border-bottom-right-radius: 0 !important;">
+        {{"Ad"|translate}}
+      </ion-segment-button>
+      <ion-segment-button  value="product" class="border-segment-cls" style="border-left: 0 !important;border-top-left-radius: 0 !important;border-bottom-left-radius: 0 !important;">
+        {{"Product"|translate}}
+      </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="type">
+    <div  *ngSwitchCase="'advertisement'" class="full-wrapper">
+      <ion-list no-border>
+        <div class="upper-panel">
+          <div class="upper-panel-div-img">
+            <img src="{{img}}">
+          </div>
+          <div class="upper-panel-right-panel">
+            <div class="upper-panel-right-panel-items-controler">
+                <ion-label>{{"Sent"|translate}}</ion-label>
+                <img src="assets/icon/enviado-no.png">
+            </div>
+            <div>
+              <button ion-button outline class="show-adv-btn">{{"View ad"|translate}}</button> 
+            </div>
+          </div>
+        </div>
+        <ion-item (click)="goToConfigAdvertisement()" class="ionitem-cls">
+          <h2>{{"Title of the advertisement"|translate}}</h2>
+          <p>{{titleAdv}}</p>
+          <ion-buttons item-end>
+            <button class="detail-btn-cls" ><img src="assets/icon/bt-siguiente.png"></button>
+          </ion-buttons>
+        </ion-item>
+
+        <ion-item (click)="goToConfigAdvertisement()" class="ionitem-cls">
+          <h2>{{"Custom message"|translate}}</h2>
+          <p>{{customMessage}}</p>
+          <ion-buttons item-end>
+            <button class="detail-btn-cls" ><img src="assets/icon/bt-siguiente.png"></button>
+          </ion-buttons>
+        </ion-item>
+
+        <ion-item class="ionitem-cls">
+          <h2>{{"Provider"|translate}}</h2>
+          <p>{{provider}}</p>
+        </ion-item>
+
+        <ion-item class="ionitem-cls">
+          <h2>{{"Hosted by"|translate}}</h2>
+          <p>{{sponsoredBy}}</p>
+        </ion-item>
+        <button ion-button full class="publish-adv-btn" (click)="purchaseProduct()">{{"Acquire"|translate}}</button>
+
+      </ion-list>
+    </div>
+
+  <ion-list *ngSwitchCase="'product'">
+    <ion-item class="ionitem-cls">
+      <h2 style="font-family:RaleTitle;">Vertical</h2>
+      <p>{{paymentType}}</p>
+    </ion-item>
+    <ion-item class="ionitem-cls">
+      <h2 style="font-family:RaleTitle;">{{"Product"|translate}}</h2>
+      <p>{{paymentType}}</p>
+    </ion-item>
+    <h2>{{"Subscription"|translate}}</h2>
+    <ion-item class="ionitem-cls">
+      <ion-label style="font-family:RaleTitle;">{{"Monthly income of the holder"|translate}}</ion-label>
+      <ion-select [(ngModel)]="minMonthlyIncomming">
+        <ion-option value="Y">Yes</ion-option>
+        <ion-option value="N">No</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item class="ionitem-cls">
+      <ion-label style="font-family:RaleTitle;">{{"Mortgage credit"|translate}}</ion-label>
+      <ion-select [(ngModel)]="hipoLearn">
+        <ion-option value="0">{{"less than"|translate}} $10.000</ion-option>
+        <ion-option value="1">{{"from"|translate}} $10,000 {{"to"|translate}} $15,000</ion-option>
+        <ion-option value="2">{{"from"|translate}}  $15,000 {{"to"|translate}} $25,000</ion-option>
+        <ion-option value="3">{{"from"|translate}}  $25,000 {{"to"|translate}} $50,000</ion-option>
+        <ion-option value="4">{{"More"|translate}} {{"than"|translate}}  $50,000</ion-option>
+      </ion-select>
+    </ion-item>
+    <h2>{{"Requirements"|translate}}</h2>
+    <ul>
+      <li>I{{"Minimum comparable income"|translate}} $10,000</li>
+      <li>{{"Residence provable 3 months"|translate}}</li>
+      <li>{{"Credit bureau"|translate}}</li>
+    </ul>
+    <h2>{{"Benefits"|translate}}</h2>
+    <ul>
+      <li>0 {{"annuity"|translate}}</li>
+    </ul>
+    <button ion-button full class="publish-adv-btn" (click)="goToHome()" >{{"Outline"|translate}}</button>
+      
+  </ion-list>
+</div>
+
+</ion-content>

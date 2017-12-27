@@ -1,0 +1,53 @@
+<ion-content class="page-introduction">
+  <ion-slides pager="true" parallax="true" >
+
+    <ion-slide style="background-color:cornflowerblue">
+      <ion-item style="position:absolute;top:100px" >
+      <ion-label>Elige tu idioma</ion-label>
+    <ion-select (ionChange)="translateToEnglish()" interface="popover" [(ngModel)]="language">
+      <ion-option value="en">English</ion-option>
+      <ion-option value="es">Español</ion-option>
+    </ion-select>
+    </ion-item>
+    </ion-slide>
+
+    <ion-slide>
+      <div style="height:100%;">
+      <ion-row>  
+          <div class="first-section"></div>
+        </ion-row>  
+        <ion-row class="second-section" padding>
+          <div class="title-text">Lorem Ipsium Title</div>
+          <div class="body-text">{{"intro"|translate}}</div>                    
+        </ion-row>       
+        <button ion-button (click)="navHome()" class="scape-intro-btn">{{"SKIP" | translate}}</button>
+      </div>  
+    </ion-slide>
+
+    <ion-slide>
+      <div style="height:100%;">
+      <ion-row>  
+          <div class="first-section"></div>
+        </ion-row>  
+        <ion-row class="second-section" padding>
+          <div class="title-text">Lorem Ipsium Title</div>
+          <div class="body-text">{{"intro"|translate}}</div>          
+        </ion-row>       
+        <button ion-button (click)="navHome()" class="scape-intro-btn">{{"SKIP" | translate}}</button>
+      </div>  
+    </ion-slide>
+
+    <ion-slide>
+      <div style="height:100%;">
+      <ion-row>  
+          <div class="first-section"></div>
+        </ion-row>  
+        <ion-row class="second-section" padding>
+          <div class="title-text">Lorem Ipsium Title</div>
+          <div class="body-text">{{"intro"|translate}}</div>          
+        </ion-row>
+        <button ion-button (click)="navHome()" class="scape-intro-btn">{{"SKIP" | translate}}</button>       
+      </div>  
+    </ion-slide>
+  </ion-slides>
+</ion-content>

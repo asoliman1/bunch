@@ -1,0 +1,131 @@
+page-chat {
+    ion-content{
+        background-color: rgb(230,230,230)!important;
+    }
+    ion-footer {
+        background: white;
+        border: 1px solid rgb(34,146,192);
+        border-radius: 30px;
+        max-height: 45px;
+        display: inline-flex;
+        .footer-input {
+           height: 100%;
+           width: 70%
+        }
+    }
+     ion-card {
+        background: white;
+        border: 1px solid grey;
+        border-radius: 10px !important;
+    }
+        .img-col{
+        height:30px;
+        width:30px;
+        text-align: center !important;
+        margin-left: 50px;
+    }
+
+    ion-card-header {
+        font-family: RaleTitle;
+        font-size: 16px;
+        width: 80%;
+    }
+    .title-entrance-chat {
+        border-top:0;
+        font-family: RaleTitle;
+        background: transparent;
+    }
+    .border-segment-cls {
+        border: 2px solid rgb(230,230,230) !important;
+        border-radius: 10px;
+        background: white;
+    }
+    .segment-md .segment-button {
+        background-color: white;
+    }
+    .segment-ios .segment-button {
+        background-color: white;
+    }
+    .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated{
+        margin-right: 0;      
+    }
+    
+    .segment-md .segment-button.segment-activated {
+        color: #fff;
+        background-color: #488aff;
+        opacity: 1;
+        -webkit-transition: .1s all linear;
+        transition: .1s all linear;
+    }
+    .toolbar-md .segment-button {
+        max-width: 100px;
+        height: 2.6rem;
+        font-size: 1.2rem;
+        line-height: 2.5rem;
+    }
+    .segment-ios .segment-button {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        width: 0;
+        height: 3.2rem;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #488aff;
+        font-size: 1.3rem;
+        line-height: 3rem;
+        color: #488aff;
+    }
+
+    .ionitem-cls {
+        border: 2px solid rgb(220,220,220) !important;
+        border-radius: 10px !important;
+        margin: 15px auto;
+        .thumbnail-cls {
+            min-height: initial;
+            min-width: initial;
+            img {
+                height: 40px;
+                width: auto;
+            }
+        }
+        .item-inner {
+            border: none !important;
+        }
+    }
+
+    .border-segment-cls {
+        border: 2px solid rgb(230,230,230) !important;
+        border-radius: 10px;
+        background: white;
+    }
+
+    .text-input-md {
+        width: 85%;
+    }
+
+    .text-input-ios {
+        width: 85%;
+    }
+
+      .publish-adv-btn{
+        border: 1px solid transparent;
+        border-radius: 15px;
+        background: rgb(34,146,192);
+    }
+    .chat-button::after{
+        content: url("../assets/icon/enviar-mensaje.png");
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 90%;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        text-align: center;
+        line-height: 40px;
+        align-items: center;
+    }
+    
+}

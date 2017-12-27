@@ -1,0 +1,93 @@
+page-recovery {
+    overflow-y: auto;
+            
+    ion-header.header-custom-cls {
+            background: url('../assets/img/splash2.jpg');
+            background-position-y: bottom; 
+            color: white;
+            margin: 10px auto;
+            min-height: 100px;        
+            text-align: center;
+        
+        img {
+            height: 40px !important;            
+            margin-top: 15px;
+        }
+        div {
+            width: 90%;
+            margin: 5px auto;
+        }
+    }
+    
+    ion-content{
+        background: rgba(245,245,245,255) !important;
+        ion-item {
+            border: 2px solid rgb(175,175,175) !important;
+            border-radius: 10px !important;
+            margin: 10px auto !important;
+        }    
+        .slide-zoom {
+            height: 100% !important;
+        }
+        .toolbar-title {
+            text-align: justify;
+            white-space: initial;
+        }
+        
+        .divRow {
+            width: 100%;
+            margin: 10px auto;
+            text-align: center;
+            border: 1px solid rgba(220,220,220,255);
+            border-radius: 15px;
+            background: white !important;
+
+            .email-field { 
+                background: white !important;
+                border: 2px solid white;
+                border-radius: 14px;
+                input{
+                    width: 60%;
+                }
+            }
+            .email-field::before {
+                content: url("../assets/icon/correo-fomularios.png");
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                left: 3%;
+                top: 40%;
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+                text-align: center;
+                line-height: 40px;
+                align-items: center;
+            }
+        }
+
+        .recovery-btn {
+            width: 100%;
+        }
+
+        .title-recovery {
+            font-family: RaleText;
+        }
+
+        .confirm-recovery-text {
+            font-family: RaleTitle;
+        }
+        .confirm-recovery-btn {        
+            width: 100%;
+            border-radius: 25px;
+            max-height: 35px;
+        }
+
+    }
+
+    
+    .divImg {
+        width: 15%;
+        margin: 5px auto;
+    }
+
+}

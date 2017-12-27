@@ -1,0 +1,100 @@
+
+<ion-header>
+  <ion-col>
+    <div class="divImg">
+      <img src="assets/icon/usuario-header.png">
+    </div>
+    <div class="titleForm">{{"Create a new Account"|translate}}</div>    
+  </ion-col>
+</ion-header>
+
+<ion-content padding class="content-cntainer">
+    <ion-slides inset spaceBetween=5 #slides>
+        <ion-slide>        
+          <ion-label left>{{"What is your email?"|translate}}</ion-label>                   
+          <div class="divRow">
+                <ion-input class="input-cls" type="text" placeholder="{{'EMAIL'|translate}}" required></ion-input>
+           </div>     
+          <div class="divRow">
+                <ion-input class="input-cls" type="text" placeholder="{{'Confirm e-mail'|translate}}" required></ion-input> 
+          </div>              
+            <button ion-button  class="continue-btn" (click)="nextSlide()">{{"Continue"|translate}}</button>
+        </ion-slide>
+
+        <ion-slide>    
+          <ion-label left>{{"What's your name?"|translate}}</ion-label>
+          <div class="divRow">
+            <ion-input class="input-cls" type="text" placeholder="{{'firstname'|translate}}" #name></ion-input>
+          </div>
+          <div class="divRow">
+            <ion-input class="input-cls" type="text" placeholder="{{'lastname'|translate}}" required></ion-input> 
+          </div>
+          <div class="divRow">
+            <ion-input class="input-cls" type="text" placeholder="{{'Mothers last name'|translate}}" required></ion-input>                
+          </div>
+          <div class="divRow">
+            <button ion-button class="continue-btn" (click)="nextSlide()">{{"Continue"|translate}}</button>
+          </div>
+          <div class="footerSection">
+            <div class="divRow">
+              <button ion-button class="back-btn"(click)="previousSlide()">
+                <img src="assets/icon/bt-regresar.png"> 
+              </button>
+            </div>
+            <div class="divRow">{{"passed"|translate}} {{currentStep}} {{"from"|translate}} {{maxSlides}}</div>
+          </div>
+        </ion-slide>
+
+        <ion-slide #gender>
+          <ion-label left>{{"What is your gender?"|translate}}</ion-label>
+          <div class="divRow" *ngFor="let item of selections">
+            <ion-item >
+                <ion-label>{{item.title}}</ion-label>
+                <ion-checkbox color="dark"  [(ngModel)]="item.checked" (click)="updateCheckbox(item.index, selections)"></ion-checkbox>
+            </ion-item>
+          </div> 
+          <div class="divRow">
+            <button ion-button class="continue-btn" (click)="nextSlide()">{{"Continue"|translate}}</button>
+          </div>         
+          <div class="footerSection" style="margin-top:40%;">
+            <div class="divRow">
+              <button ion-button class="back-btn"(click)="previousSlide()">
+                <img src="assets/icon/bt-regresar.png"> 
+              </button>
+            </div>
+            <div class="divRow">{{"passed"|translate}} {{currentStep}} {{"from"|translate}} {{maxSlides}}</div>
+          </div>
+        </ion-slide>
+
+        <ion-slide>
+          <ion-label left>{{"What is your birth date?"|translate}}</ion-label>
+          <ion-item >
+            <!-- <ion-label>Período</ion-label> -->
+            <div style="width :100%;" (click)="launchPicker()">
+              <span>{{"Period"|translate}}</span><span style="right: 0; position: absolute;">{{datePicked}}</span>
+            </div>
+          </ion-item>
+           <div class="divRow">
+            <button ion-button class="continue-btn" (click)="nextSlide()">{{"Continue"|translate}}</button>
+          </div>   
+          <div class="footerSection" style="margin-top: 58%;">
+            <div class="divRow">
+              <button ion-button class="back-btn"(click)="previousSlide()">
+                <img src="assets/icon/bt-regresar.png"> 
+              </button>
+            </div>
+            <div class="divRow">{{"passed"|translate}} {{currentStep}} {{"from"|translate}} {{maxSlides}}</div>
+          </div>
+
+        </ion-slide>
+        <ion-slide>
+          <div>{{"Congratulations"|translate}}!</div>
+          <div>{{"Already a member of the Bunch community, do not forget to fill all your data in your profile so you can start earning more."|translate}}</div>
+          <div class="divRow">
+            <button ion-button class="continue-btn" (click)="goHome()">{{"Start"|translate}}</button>
+          </div>  
+        </ion-slide>
+
+    </ion-slides>
+
+</ion-content>

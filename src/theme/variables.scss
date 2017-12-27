@@ -1,6 +1,16 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/v2/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
 $font-path: "../assets/fonts";
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
 
 @import "ionic.globals";
 
@@ -12,8 +22,7 @@ $font-path: "../assets/fonts";
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
 
-$text-color:        #000;
-$background-color:  #fff;
+
 
 
 // Named Color Variables
@@ -77,3 +86,28 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+
+@font-face {
+font-family: RaleTitle;
+src: url("../assets/fonts/Raleway-Bold.ttf");
+font-size: 24px;
+}
+
+@font-face {
+font-family: RaleSubtitle;
+src: url("../assets/fonts/Raleway-Regular.ttf");
+font-size: 18px;
+}
+
+@font-face {
+font-family: RaleText;
+src: url("../assets/fonts/Raleway-Regular.ttf");
+font-size: 14px;
+}
+
+@font-face {
+font-family: RaleCondition;
+src: url("../assets/fonts/Raleway-Regular.ttf");
+font-size: 10px;
+}

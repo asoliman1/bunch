@@ -1,0 +1,59 @@
+page-home {
+    .ion-ios-notification-outline,.ion-ios-notification,.ion-md-notification,.ion-md-notification-outline {
+        content: url('../assets/icon/alertas-menu-off.png');
+    }
+    .tabs-ios,.tabs-md .tab-button[aria-selected=true] .tab-button-icon[aria-label="notification"] {
+        content: url('../assets/icon/alertas-menu-on.png');        
+    }
+
+    .ion-ios-texting-outline,.ion-ios-texting,.ion-md-texting,.ion-md-texting-outline {
+        content: url('../assets/icon/mensajes-menu-off.png');
+    }
+    .tabs-ios,.tabs-md .tab-button[aria-selected=true] .tab-button-icon[aria-label="texting"] {
+        content: url('../assets/icon/mensajes-menu-on.png');        
+    }
+
+    .ion-ios-advertisement-outline,.ion-ios-advertisement,.ion-md-advertisement,.ion-md-advertisement-outline {
+        content: url('../assets/icon/anuncios-menu-off.png');
+    }
+    .tabs-ios,.tabs-md .tab-button[aria-selected=true] .tab-button-icon[aria-label="advertisement"] {
+        content: url('../assets/icon/anuncios-menu-on.png');        
+    }
+
+    .ion-ios-statistics-outline,.ion-ios-statistics,.ion-md-statistics,.ion-md-statistics-outline {
+        content: url('../assets/icon/estadisticas-menu-off.png');
+    }
+    .tabs-ios,.tabs-md .tab-button[aria-selected=true] .tab-button-icon[aria-label="statistics"] {
+        content: url('../assets/icon/estadisticas-menu-on.png');        
+    }
+
+    .ion-ios-profile-outline,.ion-ios-profile,.ion-md-profile,.ion-md-profile-outline {
+        content: url('../assets/icon/perfil-menu-off.png');
+    }
+    .tabs-ios,.tabs-md .tab-button[aria-selected=true] .tab-button-icon[aria-label="profile"] {
+        content: url('../assets/icon/perfil-menu-on.png');        
+    }
+
+
+    .ion-ios-menu-outline,.ion-ios-menu,.ion-md-menu,.ion-md-menu-outline {
+        content: url('../assets/icon/termometro-menu-off.png');
+    }
+    .tabs-ios,.tabs-md .tab-button[aria-selected=true] .tab-button-icon[aria-label="menu"] {
+        content: url('../assets/icon/termometro-menu-on.png');        
+    }
+
+    .ion-ios-products-outline,.ion-ios-products,.ion-md-products,.ion-md-products-outline {
+        content: url('../assets/icon/productos-menu-off.png');
+    }
+    .tabs-ios,.tabs-md .tab-button[aria-selected=true] .tab-button-icon[aria-label="products"] {
+        content: url('../assets/icon/productos-menu-on.png');        
+    }
+
+    .hideTab {
+        display: none !important;
+    }
+
+
+
+
+}

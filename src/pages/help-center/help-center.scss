@@ -1,0 +1,27 @@
+
+page-help-center {
+      ion-content{
+        background-color: rgb(230,230,230)!important;
+    }
+    
+    .notification-btn {
+        padding-left: 16px;
+        padding-right: 16px;
+        border-radius: 10px;
+        border: 1px solid gray;
+        margin-bottom: 10px;
+    }
+    .notification-btn::after{
+        content: url("../assets/icon/bt-siguiente.png");
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 90%;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        text-align: center;
+        line-height: 40px;
+        align-items: center;
+    }
+}

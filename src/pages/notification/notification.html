@@ -1,0 +1,16 @@
+<ion-header class="tab-header-cls">
+  <ion-col>
+    <div class="divImg">
+      <img src="assets/icon/alertas-header.png">
+    </div>
+    <div class="titleForm">{{"notifications"|translate}}</div>    
+  </ion-col>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)" class="notification-btn" id="{{item.id}}"full>
+      {{ item.message }}</button>      
+  </ion-list>
+</ion-content>

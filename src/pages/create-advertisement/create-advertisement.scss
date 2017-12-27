@@ -1,0 +1,129 @@
+page-create-advertisement {
+    ion-header{
+        min-height: 0 !important;
+    }
+    ion-content{
+        background-color: rgb(230,230,230)!important;
+    }
+
+    .title-cls {
+        font-family: RaleTitle;
+        font-size: 24px;
+        text-align: center;
+        display: inline-block !important;
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .tab-header-cls {
+        margin: 0 auto;
+        min-height: 0;
+
+        .titleForm {
+            width: 90%;
+            margin: 5px auto;
+            text-align: center;
+        }    
+    }     
+
+    .ionitem-cls {
+        border: 2px solid rgb(220,220,220) !important;
+        border-radius: 10px !important;
+        margin: 15px auto;
+        .thumbnail-cls {
+            min-height: initial;
+            min-width: initial;
+            img {
+                height: 40px;
+                width: auto;
+            }
+        }
+        .item-inner {
+            border: none !important;
+        }
+    }
+    .detail-btn-cls {
+        background: transparent;
+    }
+    .scroll-content {
+        overflow-y: auto;
+    }
+    .publish-adv-btn{
+        border: 1px solid transparent;
+        border-radius: 10px;
+        background: rgb(34,146,192);
+    }
+    .border-segment-cls {
+        border: 2px solid rgb(230,230,230) !important;
+        border-radius: 10px;
+        background: white;
+    }
+    .segment-md .segment-button {
+        background-color: white;
+    }
+    .segment-ios .segment-button {
+        background-color: white;
+    }
+    .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated{
+        margin-right: 0;      
+    }
+    
+    .segment-md .segment-button.segment-activated {
+        color: #fff;
+        background-color: #488aff;
+        opacity: 1;
+        -webkit-transition: .1s all linear;
+        transition: .1s all linear;
+    }
+    .toolbar-md .segment-button {
+        max-width: 100px;
+        height: 2.6rem;
+        font-size: 1.2rem;
+        line-height: 2.5rem;
+    }
+    .segment-ios .segment-button {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        width: 0;
+        height: 3.2rem;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #488aff;
+        font-size: 1.3rem;
+        line-height: 3rem;
+        color: #488aff;
+    }
+    .full-wrapper{
+        .upper-panel {
+            display: -webkit-inline-box;
+            .upper-panel-div-img{
+                padding: 10px 0 0 5px;
+                img {
+                    width: auto;
+                    max-height: 100px;
+                }
+            }
+
+            .upper-panel-right-panel {
+                margin-left: 15px;
+
+                .upper-panel-right-panel-items-controler {
+                        width: 70%;
+                        display: inline-flex;
+                        img {
+                            max-height: 25px;
+                            margin: auto;
+                        }
+                }
+                .show-adv-btn {
+                    border: 2px solid rgb(220,220,220) !important;
+                    border-radius: 10px !important;
+                    background: white;
+                }
+            }
+        }
+    }
+
+}

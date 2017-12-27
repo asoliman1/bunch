@@ -1,0 +1,24 @@
+<ion-header> 
+<ion-toolbar>
+    <ion-buttons left>
+      <button icon-only ion-button (click)="goBack()">
+        <img src="assets/icon/bt-regresar-menu.png" class="image-left">
+      </button>     
+    </ion-buttons>
+    <ion-title>{{"Help Center"|translate}}</ion-title>        
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item (click)="itemSelected(1)" class="notification-btn"  full>
+    {{"Payment Issues"|translate}} 
+    </button>
+    <button ion-item (click)="itemSelected(2)" class="notification-btn"  full>
+    {{"Problems with the application"|translate}} 
+    </button> 
+    <button ion-item (click)="itemSelected(3)" class="notification-btn"  full>
+    {{"Problems with a product"|translate}}  
+    </button>       
+  </ion-list>
+</ion-content>

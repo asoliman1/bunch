@@ -1,0 +1,28 @@
+<ion-header class="tab-header-cls">
+  <ion-col>
+    <div class="divImg">
+      <img src="assets/icon/mensajes-header.png">
+    </div>
+    <div class="titleForm">{{"Messages"|translate}}</div>    
+  </ion-col>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list-header class="title-entrance-chat">{{"Inbox"|translate}}</ion-list-header>
+  <ion-list>    
+    <ion-item *ngFor="let chat of chats"  class="ionitem-cls" (click)="seeChat(chat)">
+      <ion-avatar item-start>
+        <img src="{{chat.img}}">
+      </ion-avatar>
+      
+        <h2>{{chat.name}}</h2>
+        <h3 class="last-message-stl">{{chat.lastMessage}}</h3>
+        <p>{{"Updated"|translate}} {{chat.updated}}</p>
+      
+    <ion-buttons item-end>
+      <button class="detail-btn-cls"><img src="assets/icon/bt-siguiente.png"></button>
+    </ion-buttons>
+    </ion-item>
+  </ion-list>
+</ion-content>

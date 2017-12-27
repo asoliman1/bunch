@@ -1,0 +1,51 @@
+<ion-content padding class="page-products" style="background: rgb(230,230,230);">
+  <div class="titlePage">{{"Select the vertical of your ad"|translate}}</div>
+  
+  <ion-grid fixed >
+    <ion-row>
+      <ion-col class="column-prod" col-6>
+        <div class="product-cntr" (click)="throwTopicPage(0)">
+          <div class="image-cntainer"><img src="assets/icon/bt-tarjetas-credito.png"> </div>
+          <div class="product-title">{{"Credit cards"|translate}}</div>
+        </div>
+      </ion-col>
+      <ion-col class="column-prod" col-6>
+        <div class="product-cntr" (click)="throwTopicPage(1)">
+          <div class="image-cntainer"><img src="assets/icon/bt-seguro-de-auto.png"> </div>
+          <div class="product-title">{{"Car insurance"|translate}}</div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="column-prod" col-6>
+       <div class="product-cntr" (click)="throwTopicPage(2)">
+          <div class="image-cntainer"><img src="assets/icon/bt-creditos-personales.png"> </div>
+          <div class="product-title">{{"Personal loans"|translate}}</div>
+        </div>
+      </ion-col>
+      <ion-col class="column-prod" col-6>
+        <div class="product-cntr" (click)="throwTopicPage(3)">
+        <div class="image-cntainer"><img src="assets/icon/bt-seguro-de-vida.png"> </div>
+        <div class="product-title">{{"Life insurances"|translate}}</div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      
+      <ion-col class="column-prod" col-6>
+        <div class="product-cntr" (click)="throwTopicPage(4)">
+        <div  class="image-cntainer"><img src="assets/icon/bt-inversiones.png"> </div>
+        <div class="product-title">{{"Investments"|translate}}</div>
+        </div>
+      </ion-col>
+      
+      <ion-col class="column-prod" col-6>
+        <div class="product-cntr" (click)="throwTopicPage(5)">
+        <div class="image-cntainer"><img src="assets/icon/bt-inmuebles.png"> </div>
+        <div class="product-title">{{"Estate"|translate}}</div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

@@ -1,0 +1,24 @@
+page-config-advertisement {
+    .publish-adv-btn{
+        border: 1px solid transparent;
+        border-radius: 10px;
+        background: rgb(34,146,192);
+    }
+    .ionitem-cls {
+        border: 2px solid rgb(220,220,220) !important;
+        border-radius: 10px !important;
+        margin: 15px auto;
+        .thumbnail-cls {
+            min-height: initial;
+            min-width: initial;
+            img {
+                height: 40px;
+                width: auto;
+            }
+        }
+    }
+    .title-style {
+        font-family: RaleTitle;
+        font-size: 18px;
+    }
+}

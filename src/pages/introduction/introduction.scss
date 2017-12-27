@@ -1,0 +1,50 @@
+page-introduction {
+    background-color: rgba(245,245,245,255) !important;
+
+    
+
+    .scape-intro-btn {
+        color: black;
+        width: 90%;
+        border: none;
+        background: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        text-transform: none;
+    }
+    .first-section {
+        min-height: 250px;
+        width: 100%;
+        background: url("../assets/img/demo.png");
+        background-size: cover; 
+    }
+
+    .second-section {
+        height: auto;
+        max-height: 250px;
+        overflow-y: auto;
+        font-family: RaleText;
+    }
+
+    .title-text {        
+        margin: 15px auto;
+        text-align: left;
+        width: 100%;
+        font-family: RaleTitle;
+    }
+
+    .body-text {        
+        text-align: left;
+        font-family: RaleCondition;
+        max-height: 40%;
+    }
+
+    ion-col {
+        height:100%;
+    }
+
+    .slide-zoom {
+        height: 100%;
+    }
+
+}

@@ -1,0 +1,55 @@
+.header-cls {
+    min-height: initial;
+    background: none;
+    ion-navbar {
+        padding-top: 0px !important;
+    }
+    
+}
+
+page-products {
+    background: rgba(220,220,220,245);
+
+    .toolbar-background {
+        margin-top: 0px !important;
+    }
+
+    .row {     
+        background: transparent !important;  
+
+        .column-prod {            
+             background: transparent !important;  
+        }
+        .product-cntr{
+            min-height: 135px;
+            border: 1px solid rgb(220,220,220);
+            border-radius: 10px;
+            background: white !important;
+        }
+    }
+
+    .grid{
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    ion-col{
+        background: white;
+        div {
+            display: inline-block;
+        }
+    }
+
+    .titlePage {
+        font-family: RaleTitle;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .product-title {
+        text-align: center;        
+        width: 100%;
+    }
+    .image-cntainer {
+        margin-top: 5px;
+    }
+}

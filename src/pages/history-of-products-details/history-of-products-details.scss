@@ -1,0 +1,52 @@
+page-history-of-products-details {
+        font-family: RaleTitle;        
+    
+    ion-content{
+        background-color: rgb(230,230,230)!important;
+    }
+
+    ion-card {
+        background: white;
+        border: 1px solid grey;
+        border-radius: 10px !important;
+    }
+    ion-card-header {
+        font-family: RaleTitle;
+        font-size: 16px;
+        width: 80%;
+    }
+         .img-col{
+        height:30px;
+        width:30px;
+        text-align: center !important;
+        margin-left: 50px;
+    }
+    li{
+        font-family: RaleTitle;
+        font-size: 10px;
+    }
+    
+        .label-stl {
+            font-size: 18px !important;
+            color: black !important;
+        }
+    h3{
+        font-family: RaleTitle;        
+    }
+
+    .ionitem-cls {
+        border: 1px solid grey !important;
+        border-radius: 10px !important;
+        margin: 15px auto;
+        color:rgb(34,146,192);
+        
+
+
+        .item-inner {
+            border: none !important;
+        }
+}
+    
+
+
+}
